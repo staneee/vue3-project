@@ -1,3 +1,4 @@
+// 定义变量
 $--colors: (
   "primary": (
     "base": green,
@@ -19,17 +20,14 @@ $--colors: (
   ),
 );
 
-// You should use them in scss, because we calculate it by sass.
-// comment next lines to use default color
-@forward "element-plus/theme-chalk/src/common/var.scss" with
-  (
-    // do not use same name, it will override.
-    $colors: $--colors,
-    $button-padding-horizontal: ("default": 50px)
-  );
+// 替换默认的变量
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  // 不要使用相同的名称，相同的名称将会被替换
+  $colors: $--colors,
+  $button-padding-horizontal: ("default": 50px)
+);
 
-// if you want to import all
-// @use "element-plus/theme-chalk/src/index.scss" as *;
+// @debug $--colors; // 注释本行隐藏调试信息
 
-// You can comment it to hide debug info.
-// @debug $--colors;
+// 单独引入组件的样式
+@import "element-plus/theme-chalk/src/message.scss";
