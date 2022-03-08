@@ -21,6 +21,8 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        // 如果想直接导入element-plus所有的样式
+        // @use "element-plus/theme-chalk/src/index.scss" as *;
         additionalData: `@use "@/styles/element/index.scss" as *;`,
       },
     }
