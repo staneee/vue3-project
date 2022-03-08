@@ -1,3 +1,21 @@
+<template>
+  <!-- <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" /> -->
+
+  <div class="wrapper">
+    <h1>This is an home page</h1>
+
+    <div>
+      <button @click="sayHello()">sayHello</button>
+    </div>
+
+    <div>
+      <div>count1:{{ count1 }}</div>
+      <div>count2:{{ count2 }}</div>
+      <MyCom v-model:count="count1" v-model="count2"></MyCom>
+    </div>
+  </div>
+</template>
+
 <script lang="ts">
 import { defineComponent } from "vue";
 import { RouterLink, RouterView } from "vue-router";
@@ -25,20 +43,17 @@ export default defineComponent({
 });
 </script>
 
-<template>
-  <!-- <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" /> -->
+<!-- <script setup lang="ts">
 
-  <div class="wrapper">
-    <h1>This is an home page</h1>
+import MyCom from "@/components/MyCom.vue";
+import { ref } from "vue";
 
-    <div>
-      <button @click="sayHello()">sayHello</button>
-    </div>
+const sayHello = () => {
+  alert("Hello");
+};
+const count1 = ref(1);
+const count2 = ref(1);
 
-    <div>
-      <div>count1:{{ count1 }}</div>
-      <div>count2:{{ count2 }}</div>
-      <MyCom v-model:count="count1" v-model="count2"></MyCom>
-    </div>
-  </div>
-</template>
+</script> -->
+
+<style lang="scss"></style>
