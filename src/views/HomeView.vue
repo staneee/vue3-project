@@ -29,7 +29,11 @@ export default defineComponent({
   <!-- <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" /> -->
 
   <div class="wrapper">
-    <button @click="sayHello()">sayHello</button>
+    <h1>This is an home page</h1>
+
+    <div>
+      <button @click="sayHello()">sayHello</button>
+    </div>
 
     <div>
       <div>count1:{{ count1 }}</div>
