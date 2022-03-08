@@ -1,12 +1,5 @@
 <script lang="ts">
-import { defineComponent, defineProps } from "vue";
-
-export interface IMyCom {
-  count?: number;
-  modelValue?: number;
-}
-
-const props = defineProps<IMyCom>();
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "MyCom",
