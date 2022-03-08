@@ -55,7 +55,7 @@ export default defineComponent({
   <RouterView />
 </template>
 
-<style>
+<style lang="scss">
 @import "@/assets/base.css";
 
 #app {

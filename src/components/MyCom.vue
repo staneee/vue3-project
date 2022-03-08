@@ -11,16 +11,16 @@ const props = defineProps<IMyCom>();
 export default defineComponent({
   name: "MyCom",
   props: {
-    count1: {
+    count: {
       type: Number,
     },
-    count2: Number,
+    modelValue: Number,
   },
   emits: ["update:count", "update:modelValue"],
   data() {
     return {
-      count1: this.count,
-      count2: this.modelValue,
+      count1: this.count || 1,
+      count2: this.modelValue || 1,
     };
   },
   methods: {
